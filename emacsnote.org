@@ -30,10 +30,11 @@
 
 - C-x C-+(or-) to change the font size
 - C-g >>> quit current command
-- M-(return)  自动排序， 并且建立下一行
+
 
 *** Org-mode
 - C-c C-t >>> switch among TODO, DONE and normal
+- M-(return)  自动排序， 并且建立下一行
 
 
 - <s(tab) >>> begin source emacs-lisp

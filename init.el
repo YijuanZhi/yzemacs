@@ -61,6 +61,8 @@
 
 ;;------------------------------------------------------------------------------
 
+;; when files changed from external, it is going to change the files inside emacs as well
+(global-auto-revert-mode t)
 
 ;; smooth-scrolling mode on
 (require 'smooth-scrolling)
