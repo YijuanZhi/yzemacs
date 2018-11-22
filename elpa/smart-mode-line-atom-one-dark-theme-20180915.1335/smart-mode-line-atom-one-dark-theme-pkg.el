@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "smart-mode-line-atom-one-dark-theme" "20180915.1335" "Atom-one-dark theme for smart-mode-line" '((emacs "24.3") (smart-mode-line "2.10")) :commit "21cf510c6dfc919517af045435f16dc3527d7d04" :keywords '("mode-line" "themes" "faces") :authors '(("Davide Restivo" . "davide.restivo@yahoo.it")) :maintainer '("Davide Restivo" . "davide.restivo@yahoo.it") :url "https://github.com/daviderestivo/smart-mode-line-atom-one-dark-theme")
