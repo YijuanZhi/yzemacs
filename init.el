@@ -37,9 +37,14 @@
 		      nodejs-repl
 		      exec-path-from-shell
 		      ;; --- Themes ---
+		      smart-mode-line
+		      smart-mode-line-atom-one-dark-theme
+		      smart-mode-line-powerline-theme
+		      solarized-theme 
 		      zenburn-theme
 		      monokai-theme
 		      sublime-themes
+		      atom-one-dark-theme
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -63,6 +68,11 @@
 
 ;;------------------------------------------------------------------------------
 
+;; smart mode line
+(setq sml/no-confirm-load-theme t)
+(require 'smart-mode-line)
+(setq sml/theme 'atom-one-dark)
+(sml/setup)
 ;; when files changed from external, it is going to change the files inside emacs as well
 (global-auto-revert-mode t)
 
