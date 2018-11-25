@@ -19,12 +19,13 @@
 		      smartparens
 		      exec-path-from-shell
 		      popwin
+		      smart-mode-line
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
 		      nodejs-repl
-		      exec-path-from-shell
 		      ;; --- Themes ---
+		      smart-mode-line-atom-one-dark-theme
 		      zenburn-theme
 		      monokai-theme
 		      sublime-themes
@@ -47,6 +48,8 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize)) ;; Find Executable Path on OS X
 
+
+;; -----------------------------------------------------------------------------------------------
 
 ;; config for popwin
 (require 'popwin)

@@ -19,4 +19,10 @@
 
 (set-frame-font "Hack 14" nil t)
 
+;; smart mode line
+(setq sml/no-confirm-load-theme t)
+(require 'smart-mode-line)
+(setq sml/theme 'atom-one-dark)
+(sml/setup)
+
 (provide 'init-ui)
