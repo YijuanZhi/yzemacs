@@ -9,10 +9,4 @@
 (require 'init-org)
 (require 'init-hotkeys)
 (require 'init-custom)
-
-;; default font set
-(set-face-attribute 'default nil
-                    :family "Hack"
-                    :height 140
-                    :weight 'normal
-                    :width 'normal)
+(setq custom-file (expand-file-name "emacsinit/init-custom.el" user-emacs-directory))

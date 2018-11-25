@@ -17,4 +17,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
 
+(set-frame-font "Hack 14" nil t)
+
 (provide 'init-ui)
