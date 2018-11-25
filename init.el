@@ -119,8 +119,9 @@
 ;; company mode ready
 (global-company-mode t)
 
-;; back up disabled
+;; back up and autosave functions disabled
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 
 (require 'recentf)
