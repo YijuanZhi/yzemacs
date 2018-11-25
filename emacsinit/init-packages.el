@@ -20,6 +20,7 @@
 		      exec-path-from-shell
 		      popwin
 		      smart-mode-line
+		      reveal-in-osx-finder
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
@@ -50,6 +51,9 @@
 
 
 ;; -----------------------------------------------------------------------------------------------
+
+;;dired x
+(require 'dired-x)
 
 ;; config for popwin
 (require 'popwin)

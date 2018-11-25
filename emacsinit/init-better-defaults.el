@@ -40,5 +40,26 @@
 	(indent-buffer)
 	(message "Indent buffer.")))))
 
+;;hippie-expand
+(setq hippie-expand-try-function-list '(try-expand-debbrev
+					try-expand-debbrev-all-buffers
+					try-expand-debbrev-from-kill
+					try-complete-file-name-partially
+					try-complete-file-name
+					try-expand-all-abbrevs
+					try-expand-list
+					try-expand-line
+					try-complete-lisp-symbol-partially
+					try-complete-lisp-symbol))
+
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; dired mode optimized
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+(put 'dired-find-alternate-file 'disabled nil)
+(setq dired-dwim-target t)
+
 
 (provide 'init-better-defaults)

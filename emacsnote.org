@@ -23,15 +23,31 @@
 - C-x 3 >>> keep two windwos right and left
 - M-x load-file >>> load the current file
 - C-c c g >>> open counsel-git to find files(moded)
+- C-c f >>> open the file's directory in finder(moded)
 
 ** js2 mode
 - C-x C-e >>> nodejs-repl-send-buffer(moded)
+
+** Dired mode (directory)
+- C-x C-j >>> open dired mode in the current directory
+- C-x d >>> open dired mode
+- + >>> create a directory
+- C-x C-f >>> create a file
+- g >>> refresh dired buffer
+- C(capital c) >>> copy file
+- D  >>> delete file or directory
+- R  >>> rename
+- c  >>> marked as copy
+- d  >>> marked as deletion
+- u  >>> clear the marks
+- x  >>> run the marks
 
 ** Others
 
 - C-x C-+(or-) to change the font size
 - C-g >>> quit current command
 - C-M \ >>> indent region(moded)
+- S-/  >>> hippie expand
 
 
 *** Org-mode

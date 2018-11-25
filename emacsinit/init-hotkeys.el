@@ -3,7 +3,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-(global-set-key (kbd "<f1>") 'open-my-init-file)
+;; (global-set-key (kbd "<f1>") 'open-my-init-file)
 
 ;; configure for nodejs(running js files)
 (require 'nodejs-repl)
@@ -24,5 +24,14 @@
 (global-set-key (kbd "C-c c g") 'counsel-git)
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(require 'reveal-in-osx-finder)
+(global-set-key (kbd "C-c f") 'reveal-in-osx-finder)()
+
 
 (provide 'init-hotkeys)
