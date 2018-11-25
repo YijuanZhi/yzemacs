@@ -22,6 +22,7 @@
 - C-x 2 >>> keep two windows up and down
 - C-x 3 >>> keep two windwos right and left
 - M-x load-file >>> load the current file
+- C-c c g >>> open counsel-git to find files(moded)
 
 ** js2 mode
 - C-x C-e >>> nodejs-repl-send-buffer(moded)
@@ -30,6 +31,7 @@
 
 - C-x C-+(or-) to change the font size
 - C-g >>> quit current command
+- C-M \ >>> indent region(moded)
 
 
 *** Org-mode
