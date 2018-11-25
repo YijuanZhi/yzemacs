@@ -73,6 +73,8 @@
 (require 'smart-mode-line)
 (setq sml/theme 'atom-one-dark)
 (sml/setup)
+
+
 ;; when files changed from external, it is going to change the files inside emacs as well
 (global-auto-revert-mode t)
 
