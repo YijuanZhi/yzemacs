@@ -31,6 +31,7 @@
 		      counsel
 		      smartparens
 		      exec-path-from-shell
+		      popwin
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
@@ -62,6 +63,12 @@
 
 
 ;;------------------------------------------------------------------------------
+
+
+;; config for popwin
+(require 'popwin)
+(popwin-mode t)
+
 
 ;; when files changed from external, it is going to change the files inside emacs as well
 (global-auto-revert-mode t)
