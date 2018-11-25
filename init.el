@@ -9,73 +9,22 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+(add-to-list 'load-path "~/.emacs.d/emacsinit/")
+(require 'init-packages)
 
 
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  )
 
-;; cl - Common Lisp Extension
-(require 'cl)
+;; when files changed from external, it is going to change the files inside emacs as well
+(global-auto-revert-mode t)
 
-;; Add Packages
-(defvar my/packages '(
-		      ;; --- Auto-completion ---
-		      company
-		      ;; --- Better Editor ---
-		      smooth-scrolling
-		      hungry-delete
-		      swiper
-		      counsel
-		      smartparens
-		      exec-path-from-shell
-		      popwin
-		      ;; --- Major Mode ---
-		      js2-mode
-		      ;; --- Minor Mode ---
-		      nodejs-repl
-		      exec-path-from-shell
-		      ;; --- Themes ---
-		      zenburn-theme
-		      monokai-theme
-		      sublime-themes
-		      ) "Default packages")
 
-(setq package-selected-packages my/packages)
 
-(defun my/packages-installed-p ()
-  (loop for pkg in my/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
-
-(unless (my/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg my/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)) ;; Find Executable Path on OS X
 
 
 
 ;;------------------------------------------------------------------------------
 
 
-;; config for popwin
-(require 'popwin)
-(popwin-mode t)
-
-
-;; when files changed from external, it is going to change the files inside emacs as well
-(global-auto-revert-mode t)
-
-;; smooth-scrolling mode on
-(require 'smooth-scrolling)
-(smooth-scrolling-mode 1)
 
 
 ;; configure for nodejs(running js files)
@@ -93,15 +42,10 @@
 (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
 
-;; configure for smartparens
-(require 'smartparens-config) ;; Always start smartparens mode in js-mode.
-(smartparens-global-mode t)
+
 	  
 
-;; configure for swiper
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -110,9 +54,7 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 
-;; hungry delete t
-(require 'hungry-delete)
-(global-hungry-delete-mode)
+
 
 ;; bar mode
 (tool-bar-mode -1)
@@ -123,8 +65,7 @@
 (global-linum-mode t)
 (setq inhibit-splash-screen t)
 
-;; company mode ready
-(global-company-mode t)
+
 
 ;; back up and autosave functions disabled
 (setq make-backup-files nil)
@@ -134,6 +75,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
+(setq recentf-max-menu-item 10)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 
@@ -162,9 +104,10 @@
  '(default ((t (:family "Hack" :foundry "outline" :slant normal :weight normal :height 120 :width normal))))
  '(js2-external-variable ((t (:foreground "dark gray")))))
 
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-item 10)
+
+
+
+
 
 ;; delete selection
 (delete-selection-mode 1)
