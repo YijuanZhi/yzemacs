@@ -3,7 +3,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-(global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "<f1>") 'open-my-init-file)
 
 ;; configure for nodejs(running js files)
 (require 'nodejs-repl)
@@ -20,5 +20,7 @@
 
 (require 'recentf)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+(global-set-key (kbd "C-c c g") 'counsel-git)
 
 (provide 'init-hotkeys)

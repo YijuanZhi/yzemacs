@@ -9,4 +9,3 @@
 (require 'init-org)
 (require 'init-hotkeys)
 (require 'init-custom)
-(setq custom-file (expand-file-name "emacsinit/init-custom.el" user-emacs-directory))
